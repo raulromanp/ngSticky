@@ -38,6 +38,10 @@ And if you want to customize the body style while the element is sticky:
 
     <div sticky offset="100" body-class="somethingIsSticky"> Taste my gule! </div>
 
+If yo want to bind the sticky elements to a parent scrollable container
+
+        <div sticky container="#parentContainer"> Hey there! </div>
+
 In order to enable sticky based on a media query:
 
     <div sticky media-query="min-width: 768px"> Won't be sticky on small screens! </div>
