@@ -1,9 +1,10 @@
 {
   "name": "ngsticky",
-  "version": "1.7.9",
-  "homepage": "https://github.com/d-oliveros/ngSticky",
+  "version": "1.7.11",
+  "homepage": "https://github.com/raulromanp/ngSticky",
   "authors": [
     "David Oliveros <dato.oliveros@gmail.com>"
+    "Raul Roman <raulromanp@gmail.com>"
   ],
   "description": "A simple, pure javascript (No jQuery required!) AngularJS directive to make elements stick when scrolling down.",
   "main": "lib/sticky.js",
@@ -11,9 +12,9 @@
     "angular": "^1.2.0"
   },
   "repository": {
-		"type": "git",
-		"url": "git@github.com:d-oliveros/ngSticky.git"
-	},
+    "type": "git",
+    "url": "git@github.com:raulromanp/ngSticky.git"
+  },
   "keywords": [
     "angularjs",
     "angular",
@@ -33,8 +34,17 @@
     "test",
     "tests"
   ],
-	"engines": {
-		"node": ">=0.10",
-		"npm": ">=1.1.59"
-	}
+  "engines": {
+    "node": ">=0.10",
+    "npm": ">=1.1.59"
+  },
+  "readme": "Angular Sticky\n==============\n\nA simple, pure javascript (No jQuery required!) AngularJS directive to make elements stick when scrolling down.\n\n### Features\n\n  * Allows use of an offset so elements can be stuck to eg. 50px from the top of the browser\n  * Recalculates element position on page load and on window resize\n  * Clean: No external CSS or jQuery required, and it only adds the classes you specify.\n\n\n### Bower\n\nInstall with bower:\n\n```bash\nbower install ngSticky\n```\n\n\n### Usage\n\nInclude the .js file in your page then enable usage of the directive by including the \"sticky\" module\nas a dependency. Use the directive as follows:\n\n    <div sticky> Hey there! </div>\n\nTo toggle the element stickiness you can bind with scope using the disable-sticky (ng-model) as follows {{ disabled = true }}: \n    \n    <div sticky disable-sticky=\"disabled\"> I won't stick! </div>\n    <div sticky disable-sticky=\"!disabled\"> I will stick! </div>\n\nTo make the element stick within a certain offset of the top of the screen, you can provide an offset as follows:\n\n    <div sticky offset=\"100\"> I won't touch the top of your screen! </div>\n\nIf you want to customize the style while the element is sticky, we have an api for you too:\n\n    <div sticky offset=\"100\" sticky-class=\"imSoSticky\"> Taste my glue! </div>\n\nAnd if you want to customize the body style while the element is sticky:\n\n    <div sticky offset=\"100\" body-class=\"somethingIsSticky\"> Taste my glue! </div>\n\nIn order to enable sticky based on a media query:\n\n    <div sticky media-query=\"min-width: 768px\"> Won't be sticky on small screens! </div>\n\nIf you want the sticky element to be scrollable only if it's smaller then the window inner height then you can set the `stick-limit` attribute:\n\n    <div sticky offset=\"100\" stick-limit=\"true\"> Will stick only if the element isn't bigger then the view</div>\n\nAnd if you want to confine an element to its parent, and let it 'bottom out', just add the `confine` attribute:\n\n    <div sticky offset=\"100\" confine=\"true\"> Will unstick and stick to bottom of parent element</div>\n\n> NOTE: The confine attribute will automagically assign its parent a `position: relative` style in order to help with absolute positioning relative to the parent.\n\nCheers.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/d-oliveros/ngSticky/issues"
+  },
+  "_id": "ngsticky@1.7.11",
+  "_shasum": "4f29e51e00441763675dc14f77cd2de324eecf08",
+  "_resolved": "git+ssh://git@github.com/d-oliveros/ngSticky#98098009f9bcde6bf479fd64f474781ffabc16f0",
+  "_from": "git+ssh://git@github.com/raulromanp/ngSticky"
 }
