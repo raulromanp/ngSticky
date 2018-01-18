@@ -44,7 +44,7 @@ In order to enable sticky based on a media query:
 
 For webapps with scrollable containers, you can bind sticky objects to a particular container
 
-    <div sticky parent="#parent-container"> Hey there! </div>
+    <div sticky container="#parent-container"> Hey there! </div>
 
 If you want the sticky element to be scrollable only if it's smaller then the window inner height then you can set stick-limit attribute:
 
